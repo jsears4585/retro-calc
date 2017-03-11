@@ -1,0 +1,78 @@
+<html>
+<head>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css?family=Overpass+Mono:600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<title>Retro Calc (test env)</title>
+</head>
+<body>
+<div id="score">
+  Score
+  <div id="points">0</div>
+  <div id="streak"></div>
+</div>
+<div id="timerBox">
+  Timer
+  <div id="timer">---</div>
+</div>
+<div id="gameSpace"></div>
+<div id="roundHistory"></div>
+<div id="calc">
+  <div id="output">
+    <span id="mem_output"></span>
+    <span id="main_output"></span>
+  </div>
+  <div id="input">
+    <table>
+      <tr>
+        <td><button data-val="7" class="b">7</button></td>
+        <td><button data-val="8" class="b">8</button></td>
+        <td><button data-val="9" class="b">9</button></td>
+        <td><button data-val="ce" class="b">CE</button></td>
+        <td><button id="c" data-val="c" class="b">C</button></td>
+      </tr>
+      <tr>
+        <td><button data-val="4" class="b">4</button></td>
+        <td><button data-val="5" class="b">5</button></td>
+        <td><button data-val="6" class="b">6</button></td>
+        <td><button data-val="+" class="b">+</button></td>
+        <td><button data-val="*" class="b">*</button></td>
+      </tr>
+      <tr>
+        <td><button data-val="1" class="b">1</button></td>
+        <td><button data-val="2" class="b">2</button></td>
+        <td><button data-val="3" class="b">3</button></td>
+        <td><button data-val="-" class="b">-</button></td>
+        <td><button data-val="/" class="b">/</button></td>
+      </tr>
+      <tr>
+        <td><button data-val="." class="b">.</button></td>
+        <td><button id="zero" data-val="0" class="b">0</button></td>
+        <td class="faded lean_right">retro</td>
+        <td class="faded lean_left">calc</td>
+        <td><button id="equals" data-val="=" class="b">=</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id ="roundDisplay" class="hide"></div>
+<div id="roundNav">
+  <table>
+    <tr>
+      <td class="r">0</td>
+      <td class="r">1</td>
+      <td class="r">2</td>
+      <td class="r">3</td>
+      <td class="r">4</td>
+      <td class="r">5</td>
+      <td class="r">6</td>
+      <td class="r">7</td>
+      <td class="r">8</td>
+      <td class="r">9</td>
+    </tr>
+  </table>
+</div>
+<button id="start" class="hide">Start Game</button>
+<script src="main.js"></script>
+</body>
+</html>
