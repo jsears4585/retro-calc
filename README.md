@@ -1,5 +1,5 @@
 # retro-calc
 
-Retro Calc is an educational game that simultaneously teaches 10-digit keypad accuracy.
+Retro Calc is an educational game that teaches 10-digit keypad accuracy.
 
-Contact owner for current to-dos.
+Contact the owner for a list of current to-dos.
