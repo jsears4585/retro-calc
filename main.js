@@ -1,38 +1,19 @@
-//help mode, indicte to player to select a diff_level with a tooltip
+//::R:E:T:R:O::\\\\\
 
-//create persistent "last clicked" overlay color for currently selected difficulty level
-
-//make the "start game" button glow
-
-//leaderboards, obvi
-
-//sound effects would be awesome
-
-//error checking for false inputs to break the streak are needed
-
-//allow user to pick length of game
-	//if undefined, send error message to user
-	//set speed back to undefined after round has finished
-
-//adaptive messaging based on performance
-
-//add different gameplay modes
-	//free play
-	//operator mode (higher levels)
 
 var settings = {
+	data: [],
 	score: 0,
-	last_scored_index: undefined,
 	streak: 0,
 	highest_streak: 0,
-	streak_el: document.getElementById("streak"),
+	fired_count: 0,
+	current_round: 1,
+	round_length: 20,
 	frequency: 100,
 	gameSpace: document.getElementById("gameSpace"),
 	round_history: document.getElementById("roundHistory"),
-	data: [],
-	fired_count: 0,
-	round_length: 20,
-	current_round: 1,
+	streak_el: document.getElementById("streak"),
+	last_scored_index: undefined,
 	speed: undefined,
 	round_over: undefined,
 	curr_diff: undefined
@@ -296,41 +277,4 @@ document.onkeydown = function(e) {
     animateKey(key);
 };
 
-var assert = function(assertion, expected_result, desc) {
-	if (assertion === expected_result) {
-		return [0, "Passed: " + desc, expected_result, assertion];
-	} else {
-		return [1, "Failed: " + desc, expected_result, assertion];
-	}
-};
 
-var test_battery = function() {
-	var arr = [];
-	var passing = false;
-
-	//enter tests here:
-	
-	for (var n = 0; n < arr.length; n++) {
-		if (arr[n][0] === 0) {
-			passing = true;
-		} else {
-			passing = false;
-			for (var i = 0; i < arr.length; i++) {
-				if (arr[i][0] === 0) {
-					console.log("%c" + "Test '" + i + "' " + arr[i][1] 
-						+ "\nExpected: (" + arr[i][2] + ")" 
-						+ "\nReturned: (" + arr[i][3] + ")", "color: green;");
-				} else {
-					console.log("%c" + "Test '" + i + "' " + arr[i][1] 
-						+ "\nExpected: (" + arr[i][2] + ")" 
-						+ "\nReturned: (" + arr[i][3] + ")", "color: red;");
-				}
-			}
-		}
-	}
-	if (passing) {
-		 console.log("%c" + "All Tests Passed!", "color: green;");	
-	}
-};
-
-//test_battery();
